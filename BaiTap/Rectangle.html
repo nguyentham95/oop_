@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="800px" height="700px" style="border: 1px solid;"></canvas> 
+    <br>  
+</body>
+</html>
+<script>
+    class Rectangle{
+    constructor(height, width, ) {
+        this.width = width;
+        this.height = height;
+    }
+    getWidth() {
+        return this.width;
+    }
+    getHeight() {
+        return this.height;
+    }
+    getC() {
+        return (this.width + this.height) * 2;
+    }
+    getS() {
+        return this.width * this.height
+    
+}
+}
+let hcn = new Rectangle(500,200) 
+let c = hcn.getC();
+let s = hcn.getS();
+
+document.write("Chu vi la: " + c + " m" + "<br>" +" Dien tich la: " + s + " m<sup>2</sup>");
+
+let canvas = document.getElementById("myCanvas");
+let ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
+
+ctx.fillRect(100, 200, hcn.getHeight(), hcn.getWidth());
+ctx.stroke();
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+</head>
+<body>
+    <h1>Chuyển đổi nhiệt độ</h1>
+    <p>Nhập độ C</p>
+    <input type="number" id="tempc" placeholder="Nhập độ C" >
+    <button onclick="convert();">Convert</button>
+    <P id="ctoF">Convert to F: </p>
+    <p id="ctoK">Convert to K: </p>  
+</body>
+</html>
+<script>
+    class Temperature{
+        constructor (tempC){
+            this.tempC = tempC;
+        }
+        getC () {
+            return this.tempC;
+        }
+        getF() {
+            return (this.tempC * 1.8) + 32;
+        }
+        getK () {
+            return this.tempC + 273.5;
+        }
+    }
+    // let temp = +document.getElementById("tempc").value;
+    
+        function convert(){
+            let temp = +document.getElementById("tempc").value;
+            let C = new Temperature(temp);
+            let F = C.getF();
+            let K = C.getK();
+
+        document.getElementById("ctoF").innerHTML = "Convert to F : " + F + "<sup>0</sup>" + " F";
+        document.getElementById("ctoK").innerHTML = "Convert to K: " + K + "<sup>0</sup>" + " K";
+    }
+    
+
+    // document.write("độ C sang độ F là: " + F + "<sup>0</sup>"+ "<br>" + "độ C sang  K là: " + K  + "<sup>0</sup>");
+</script>

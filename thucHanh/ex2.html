@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xây dựng lớp Date</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    
+class Date{
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+
+        }
+        getDay() {
+            return  this.day;
+        }
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year
+        }
+        toString(){
+            return this.day + " /" + this.month + " /" + this.year;
+        }
+
+}
+    
+let d = prompt("Nhập ngày:");
+let m = prompt("Nhập tháng:")
+let y = prompt("Nhập năm:")
+
+
+let ddmmyy = new Date( d, m, y);
+let dd = ddmmyy.getDay();
+let mm = ddmmyy.getMonth();
+let yy = ddmmyy.getYear();
+    
+
+    document.write("Chuỗi ngày, tháng, năm là: " + dd + "/ " + mm + "/ " + yy);
+</script>

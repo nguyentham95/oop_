@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500px" height="500px" style="border: 1px solid;"></canvas> 
+    <br>
+</body>
+</html>
+<script>
+      // xay dung lop hinh tron
+
+      class Circle { //teen class viet hoa
+    constructor(r, color){
+        this.radius = r;
+        this.color - color;
+
+    }
+    getRadius() {
+        return this.radius;
+    }
+    getArea() {
+        return this.radius * Math.PI  * this.radius;
+    }
+}
+let circle = new Circle(80, "blue") // ten bien ow day khac class la dc
+let radius = circle.getRadius();
+let area = circle.getArea();
+
+document.write("Ban kinh r la: " + radius + " m" + "<br>" +"Dien tich S la: " + area + " m" + "<sup>2</sup>");
+
+let canvas = document.getElementById("myCanvas") ;
+    let ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(250, 250, radius, 0, 2* Math.PI) ;
+    ctx.strokeStyle = "rgb(250, 65, 125";
+    // ctx.fill();
+    ctx.stroke() ;
+
+</script>
